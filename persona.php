@@ -7,8 +7,6 @@ $limitMonths = 2000;
 
 use App\Models\{Job, Project, Printable};
 
-
-
 $job1 = new Job('PHP Developer', 'Descripcion del trabajo PHP Developer');
 $job1->months = 16;
 
@@ -46,4 +44,3 @@ function printElement($job){
 }
 
 
-?>

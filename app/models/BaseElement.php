@@ -1,8 +1,6 @@
 <?php 
 
-namespace App\Models;  
-
-  require_once 'Printable.php';  
+namespace App\Models;    
 
 class BaseElement implements Printable{
     private $title;
