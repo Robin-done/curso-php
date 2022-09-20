@@ -39,6 +39,7 @@ form{
     padding: 25px;
     word-wrap: break-word;
     border: 1px solid #cccccc;
+    border-radius: 5px;
 }
 .container-form h2{
     text-align: center;
