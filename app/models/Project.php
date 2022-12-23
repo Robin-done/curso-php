@@ -1,10 +1,10 @@
 <?php
 
-    namespace App\Models;   
+namespace App\Models;   
 
-    use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 
-    class Project extends Model { 
+class Project extends Model { 
         
     protected $table = 'projects';
         
@@ -16,8 +16,8 @@
         
         return "Project duration: $years Years $extraMonths Months";
         
-        }
-
     }
+
+}
 
 ?>

@@ -1,0 +1,23 @@
+{% extends 'layout.twig' %}
+
+{% block content%}
+
+    {% if responseMessage   %}
+        <div class="container-alert" role="alert">
+        {{ responseMessage }}
+        </div>
+    {% endif %}
+
+    <div class="container-form">    
+        <h2> Add Project</h2>
+        <form action="/projects/add"  method="post" enctype="multipart/form-data">           
+            <input type="text" name="title"  placeholder="Title">                        
+            <input type="text" name="description"  placeholder="Description">  
+                   <input type="file" name="file">              
+            <p class="test-small margin-top-remove">Solo archiso JPG o PNG son aceptados</p>     
+            <input type="submit" name="submit"  value="Enviar" class="btn">
+        </form> 
+    </div>   
+{%endblock%}
+
+

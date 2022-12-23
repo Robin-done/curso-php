@@ -1,0 +1,33 @@
+{% extends "layout.twig" %}
+
+{% block content%}
+    <h1 class="text-center">{{name}}</h1>
+        <hr/ >
+    <h3 class="margin-bot-remove">Experiencia de Trabajos</h3>            
+            <ul class="list">
+                {% for job in jobs %}
+                    <li>
+                        <p><b>{{ job.title}} </b> <br>
+                        {{job.description}}
+                         {% if  job.file_name  %}
+                          <br>
+                            <img src="{{job.file_name}}" width="60">
+                         {% endif %}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+            <hr/ >
+            <h3 class="margin-bot-remove">Proyectos realizados</h3>            
+            <ul class="list">
+                {% for project in projects %}
+                    <li>
+                        <p><b>{{ project.title}} </b> <br>
+                        {{project.description}}
+                        {% if  project.file_name  %}
+                          <br>
+                            <img src="{{project.file_name}}">
+                         {% endif %}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+{%endblock%}

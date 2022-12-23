@@ -5,12 +5,14 @@ namespace App\Models;
 class BaseElement implements Printable{
     private $title;
     public $description;
+    public $file_name;
     public $visible = true;
     public $months;
 
-    public function __construct($title, $description){
+    public function __construct($title, $description, $file_name){
         $this->title = $title;
         $this->description = $description;
+        $this->file_name = $file_name;
         
     }
 
@@ -23,9 +25,14 @@ class BaseElement implements Printable{
         }
     }
 
-    public function getTitle(){
-        
+    public function getTitle(){        
         return $this->title;
+    }
+    public function getDescription(){
+        return $this->description;
+    }
+    public function getfileName(){
+        return $this->file_name;
     }
 
     public function getDurationAssString(){
@@ -35,9 +42,7 @@ class BaseElement implements Printable{
         return "$years Years $extraMonths Months";
     }  
     
-    public function getDescription(){
-        return $this->description;
-    }
+   
 
 } 
 

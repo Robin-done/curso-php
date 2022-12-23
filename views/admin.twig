@@ -1,0 +1,14 @@
+{% extends 'layout.twig' %}
+
+{% block content%}
+<a href="/logout" class="btn align-right">Logout</a>
+
+    <h1>Dashboard</h1>
+
+    <ul class="list list-space">
+     <li><a href="/user/add" class="btn">Add User</a></li>
+     <li><a href="/projects/add" class="btn">Add Project</a></li>
+     <li><a href="/jobs/add" class="btn">Add Job</a></li>    
+    </ul>    
+
+{%endblock%}
